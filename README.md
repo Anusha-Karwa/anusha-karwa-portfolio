@@ -19,7 +19,7 @@ A single-page, scroll-driven portfolio set in a night meadow: sky lanterns, a ri
 ## What scroll does (top to bottom)
 1. **Loader**: a lantern fills with light while a rolling counter runs to 100.
 2. **Header**: studio-style columns and a "Let's talk" button; after the hero it collapses to a hamburger that opens a full-screen menu.
-3. **Name**: a giant wordmark with a rippling reflection on a glowing horizon.
+3. **Name + wish**: the name with a soft reflection, a typed line about what I do, and a "make a wish" box. Type a wish and press Release: a 3D lantern rises over the meadow carrying your words.
 4. **Story**: the intro sentence writes itself word by word with 3D objects inline. Hovering an object dims the rest and shows a caption. The lantern rope on the left shows progress and can be dragged.
 5. **What I bring**: four service-style cards that rise in staggered columns.
 6. **Trail**: two logo marquees that speed up with scroll, then a short "Building useful things, daily" interlude with a link.

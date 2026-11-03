@@ -143,18 +143,24 @@ main{position:relative;z-index:2}
 .hero-c{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;position:relative}
 .hero-c::before{content:"";position:absolute;left:50%;top:52%;width:min(900px,120vw);height:min(420px,60vh);transform:translate(-50%,-50%);background:radial-gradient(ellipse at center,rgba(45,12,42,.42),rgba(45,12,42,0) 68%);pointer-events:none;z-index:-1}
 .kick{color:#fff3e6;text-shadow:0 1px 12px rgba(60,10,40,.6)}
-.hlan{all:unset;cursor:pointer;position:relative;width:clamp(84px,9vw,130px);aspect-ratio:1;display:grid;place-items:center;margin-top:1vh;animation:hbob 5s ease-in-out infinite}
-.hlan img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 0 26px rgba(255,170,80,.75)) drop-shadow(0 14px 18px rgba(60,10,30,.35));transition:transform .6s cubic-bezier(.34,1.56,.64,1)}
-.hlan::before{content:"";position:absolute;inset:-35%;border-radius:50%;background:radial-gradient(circle,rgba(255,190,110,.45),rgba(255,140,60,0) 65%);animation:breathe 3.2s ease-in-out infinite;pointer-events:none}
-.hlan span{position:absolute;bottom:-14px;left:50%;transform:translateX(-50%);color:#ffe2b8;opacity:0;transition:opacity .3s;white-space:nowrap;font-size:9.5px}
-.hlan:hover img{transform:scale(1.1) rotate(-6deg)}.hlan:hover span{opacity:.8}
-.hlan:focus-visible{outline:2px solid var(--lantern);outline-offset:6px;border-radius:50%}
-.hlan.up{animation:fly-up 1.4s cubic-bezier(.5,0,.8,.3) forwards}
-@keyframes hbob{50%{transform:translateY(-10px) rotate(2deg)}0%,100%{transform:rotate(-2deg)}}
-@keyframes fly-up{to{transform:translateY(-60vh) scale(.4);opacity:0}}
+.wish{margin-top:min(4vh,34px);display:grid;justify-items:center;gap:10px;width:min(460px,100%)}
+.wish label{color:#fff3e6;text-shadow:0 1px 10px rgba(40,10,40,.6)}
+.wbox{display:flex;align-items:center;gap:6px;width:100%;padding:6px 6px 6px 20px;border-radius:40px;background:rgba(36,18,48,.45);border:1px solid rgba(255,207,138,.45);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 10px 40px rgba(40,10,50,.25);transition:border-color .3s,box-shadow .3s}
+.wbox:focus-within{border-color:rgba(255,207,138,.9);box-shadow:0 0 0 4px rgba(255,176,74,.15),0 10px 40px rgba(255,150,80,.25)}
+.wbox input{flex:1;min-width:0;background:none;border:0;outline:0;color:#fff6ea;font:italic 500 22px/1.2 var(--f-accent);padding:6px 0}
+.wbox input::placeholder{color:rgba(255,236,214,.55)}
+.wbox button{all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;gap:8px;padding:11px 18px 11px 14px;border-radius:30px;background:linear-gradient(135deg,#ffd38a,#ff8a3d);color:#2a1206;font-weight:600;font-size:14px;transition:transform .3s,box-shadow .3s}
+.wbox button:hover{transform:translateY(-1px);box-shadow:0 6px 22px rgba(255,140,60,.45)}
+.wbox button:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.wl{width:12px;height:16px;border-radius:5px 5px 6px 6px;background:#fff2d0;box-shadow:0 0 10px 3px rgba(255,240,200,.8);position:relative}
+.wl::before{content:"";position:absolute;left:3px;right:3px;top:-3px;height:3px;background:#2a1206;border-radius:1px}
+.wchips{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+.wchips button{all:unset;cursor:pointer;padding:4px 11px;border-radius:20px;font:italic 500 15px var(--f-accent);color:#ffe9d2;background:rgba(36,18,48,.35);border:1px solid rgba(255,236,214,.22);transition:background .3s,border-color .3s}
+.wchips button:hover,.wchips button:focus-visible{background:rgba(255,176,74,.25);border-color:rgba(255,207,138,.7)}
+.wmsg{margin:0;min-height:1.3em;color:#ffe2b8;font-size:13px;text-shadow:0 1px 10px rgba(40,10,40,.6)}
 .nm2{margin:0;display:flex;gap:.28em;justify-content:center;align-items:baseline;font-size:clamp(40px,6.4vw,108px);line-height:1;white-space:nowrap}
 .nm2 .a{font-weight:500;font-variation-settings:"wdth" 100;letter-spacing:-.03em;color:#fff6ea}
-.nm2 .b{font-family:var(--f-accent);font-style:italic;font-weight:500;letter-spacing:-.01em;color:#ffcf8a}
+.nm2 .b{text-shadow:0 0 14px rgba(70,15,50,.55),0 2px 24px rgba(50,10,45,.5);font-family:var(--f-accent);font-style:italic;font-weight:500;letter-spacing:-.01em;color:#ffcf8a}
 h1.nm2{text-shadow:0 2px 30px rgba(50,10,45,.55),0 0 50px rgba(255,170,90,.25)}
 .nm2 .ch{display:inline-block;transition:opacity 1s,transform 1.2s cubic-bezier(.2,.8,.2,1),filter 1s;transition-delay:calc(var(--d) * 55ms + .2s)}
 #name:not(.in) h1.nm2 .ch{opacity:0;transform:translateY(.45em);filter:blur(10px)}
@@ -426,6 +432,12 @@ h1.nm2{text-shadow:0 2px 30px rgba(50,10,45,.55),0 0 50px rgba(255,170,90,.25)}
   .c-meta{margin-bottom:0}
 }
 @media (max-width:560px){
+  .wish{width:calc(100vw - 40px);max-width:360px}
+  .wish label{font-size:9.5px;letter-spacing:.1em;text-align:center}
+  .wbox{padding-left:16px}
+  .wbox input{font-size:19px}
+  .wbox button{padding:10px 14px 10px 12px;font-size:13px}
+  .wmsg{text-align:center}
   h1.nm2{text-shadow:0 0 16px rgba(70,15,50,.75),0 2px 30px rgba(50,10,45,.6)}
   .hero-c{justify-content:flex-start;padding-top:4vh}
   #name{padding-bottom:13vh}
@@ -529,11 +541,16 @@ h1.nm2{text-shadow:0 2px 30px rgba(50,10,45,.55),0 0 50px rgba(255,170,90,.25)}
   <section id="name" class="wrap" aria-label="Name">
     <div class="hero-c">
       <span class="mono kick">Portfolio · 2026 · Pune</span>
-      <button class="hlan" id="hlan" aria-label="Release a lantern into the sky"><img data-icon="lantern" alt=""><span class="mono">tap me</span></button>
       <h1 class="nm2" id="nm2" aria-label="Anusha Karwa"><span class="a">Anusha</span> <span class="b">Karwa</span></h1>
       <div class="horizon h2"></div>
       <div class="nm2 refl2" id="refl2" aria-hidden="true"><span class="a">Anusha</span> <span class="b">Karwa</span></div>
       <p class="rot">I <span class="rw" id="rotw"></span><i class="caret"></i></p>
+      <form class="wish" id="wish" autocomplete="off">
+        <label class="mono" for="wishIn">Make a wish · set it free over the meadow</label>
+        <div class="wbox"><input id="wishIn" name="wish" maxlength="26" placeholder="more sunsets" aria-describedby="wmsg"><button type="submit"><i class="wl"></i>Release</button></div>
+        <div class="wchips" id="wchips"></div>
+        <p class="wmsg" id="wmsg" aria-live="polite"></p>
+      </form>
     </div>
     <div class="name-meta">
       <div><strong>Code,</strong>Strategy, Story</div>
@@ -1211,9 +1228,15 @@ function buildWorld(canvas){
   var tv=new T.Vector3(),lv=new T.Vector3(),fwd=new T.Vector3();
   var clock=new T.Clock();
 
-  function release(cx,cy){var ndc=new T.Vector3(cx/vw*2-1,-(cy/vh*2-1),.5).unproject(camera).sub(camera.position).normalize();var dist=14+Math.random()*8;var at=camera.position.clone().add(ndc.multiplyScalar(dist));at.y=Math.max(at.y,hgt(at.x,at.z)+.8);
-    var L=null;for(var i=NS;i<NS+40;i++){if(!SKY[i]||SKY[i].y>camera.position.y+90){L=SKY[i]=spawnSky(SKY[i]||{},false,at);break}}
-    if(!L){SKY[NS]=spawnSky({},false,at)}
+  function dropLabel(L){if(L&&L.label){scene.remove(L.label);L.label.material.map.dispose();L.label.material.dispose();L.label=null}}
+  function makeLabel(text){var c=document.createElement('canvas'),x=c.getContext('2d'),fs=72;x.font='italic 500 '+fs+'px "Cormorant Garamond", Georgia, serif';var w=Math.ceil(x.measureText(text).width)+60;c.width=w;c.height=120;
+    x.font='italic 500 '+fs+'px "Cormorant Garamond", Georgia, serif';x.textAlign='center';x.textBaseline='middle';x.shadowColor='rgba(255,170,80,.95)';x.shadowBlur=22;x.fillStyle='#fff3df';x.fillText(text,w/2,62);x.shadowBlur=0;x.fillText(text,w/2,62);
+    var tx=new T.CanvasTexture(c);tx.encoding=T.sRGBEncoding;var sp=new T.Sprite(new T.SpriteMaterial({map:tx,transparent:true,depthWrite:false,fog:false}));var h=.95;sp.scale.set(h*w/120,h,1);sp.renderOrder=5;scene.add(sp);return sp}
+  function release(cx,cy,text,dist){var ndc=new T.Vector3(cx/vw*2-1,-(cy/vh*2-1),.5).unproject(camera).sub(camera.position).normalize();dist=dist||14+Math.random()*8;var at=camera.position.clone().add(ndc.multiplyScalar(dist));at.y=Math.max(at.y,hgt(at.x,at.z)+.8);
+    var L=null;for(var i=NS;i<NS+40;i++){if(!SKY[i]||SKY[i].y>camera.position.y+90){dropLabel(SKY[i]);L=SKY[i]=spawnSky(SKY[i]||{},false,at);break}}
+    if(!L){dropLabel(SKY[NS]);L=SKY[NS]=spawnSky({},false,at)}
+    if(text){L.label=makeLabel(text);L.t0=U.time.value;L.s=1.35;L.v=.75;L.wish=true}else{L.wish=false}
+    return L;
   }
 
   function frame(scrollT){
@@ -1234,9 +1257,10 @@ function buildWorld(canvas){
     for(var i=0;i<NL;i++){var p=LS[i];lampU.value[i].set(p.x,p.y,p.z)}
     WARM.forEach(function(l,k){l.position.copy(LS[k]);l.intensity=(2.2+Math.sin(t*9+k*2)*.25+Math.sin(t*23+k)*.12)*U.glow.value});poolM.opacity=.9+Math.sin(t*7)*.06;
     // sky lanterns
-    var cnt=0;for(i=0;i<SKY.length;i++){var L=SKY[i];if(!L)continue;L.y+=L.v*dt*(L.user?1.4:1);var sw=Math.sin(t*.5+L.ph)*.6;var x=L.x+sw,z=L.z+Math.cos(t*.4+L.ph)*.4;
+    var cnt=0;for(i=0;i<SKY.length;i++){var L=SKY[i];if(!L)continue;L.y+=L.v*dt*(L.wish?1:L.user?1.4:1);var sw=Math.sin(t*.5+L.ph)*.6;var x=L.x+sw,z=L.z+Math.cos(t*.4+L.ph)*.4;
       if(!L.user&&(L.y>hgt(L.x,L.z)+150||L.z>cp.z+30)){spawnSky(L,false);L.y=hgt(L.x,L.z)+Math.random()*8}
-      if(L.user&&L.y>cp.y+160){SKY[i]=null;continue}
+      if(L.user&&L.y>cp.y+160){dropLabel(L);SKY[i]=null;continue}
+      if(L.label){var age=U.time.value-L.t0;L.label.position.set(L.x+Math.sin(t*.5+L.ph)*.6,L.y+1.25*L.s,z);L.label.material.opacity=clamp(age/.8,0,1)*clamp(1-(age-9)/4,0,1);if(age>13)dropLabel(L)}
       o3.position.set(x,L.y,z);o3.rotation.set(Math.sin(t+L.ph)*.08,0,Math.cos(t*.8+L.ph)*.08);o3.scale.set(L.s,L.s*1.1,L.s);o3.updateMatrix();skyBodies.setMatrixAt(cnt,o3.matrix);
       skyGlow.P[cnt*3]=x;skyGlow.P[cnt*3+1]=L.y;skyGlow.P[cnt*3+2]=z;skyGlow.S[cnt]=L.s*5;skyGlow.Ph[cnt]=L.ph;skyGlow.C[cnt*3]=1;skyGlow.C[cnt*3+1]=.55;skyGlow.C[cnt*3+2]=.2;
       skyHalo.P[cnt*3]=x;skyHalo.P[cnt*3+1]=L.y;skyHalo.P[cnt*3+2]=z;skyHalo.S[cnt]=L.s*17;skyHalo.Ph[cnt]=L.ph;skyHalo.C[cnt*3]=.85;skyHalo.C[cnt*3+1]=.34;skyHalo.C[cnt*3+2]=.1;
@@ -1326,7 +1350,18 @@ var mws=bigp.querySelectorAll('.mw');
 (function(){var W=['build payment systems.','sell ideas.','tell stories.','chase sunsets.','light lanterns.'],el=$('#rotw'),wi=0,ci=0,del=false;
   function step(){var w=W[wi];if(!del){ci++;el.textContent=w.slice(0,ci);if(ci===w.length){del=true;return setTimeout(step,1600)}}else{ci--;el.textContent=w.slice(0,ci);if(ci===0){del=false;wi=(wi+1)%W.length}}setTimeout(step,del?35:70)}
   if(RM)el.textContent=W[0];else setTimeout(step,1400)})();
-$('#hlan').addEventListener('click',function(){var b=this,r=b.getBoundingClientRect();if(World)World.release(r.left+r.width/2,r.top+r.height/2);Sound.note(783.99,.05,2.4);[987.77,1174.66].forEach(function(f,i){setTimeout(function(){Sound.note(f,.04,2)},120*(i+1))});released=true;b.classList.add('up');setTimeout(function(){b.classList.remove('up');b.style.opacity=0;requestAnimationFrame(function(){b.style.transition='opacity 1.2s';b.style.opacity=1})},1500)});
+(function(){var f=$('#wish'),inp=$('#wishIn'),msg=$('#wmsg'),n=0,ideas=['more sunsets','a great team','brave ideas','calm deadlines','one more trip'];
+  try{n=+localStorage.getItem('wishes')||0}catch(e){}
+  $('#wchips').innerHTML=ideas.slice(1,4).map(function(w){return '<button type="button">'+w+'</button>'}).join('');
+  Array.prototype.forEach.call(document.querySelectorAll('#wchips button'),function(b){b.addEventListener('click',function(){inp.value=b.textContent;inp.focus()})});
+  var pi=0;setInterval(function(){if(document.activeElement!==inp&&!inp.value){pi=(pi+1)%ideas.length;inp.placeholder=ideas[pi]}},2600);
+  f.addEventListener('submit',function(e){e.preventDefault();var w=(inp.value||inp.placeholder).trim().slice(0,26);if(!w)return;
+    var r=inp.getBoundingClientRect();if(World)World.release(r.left+r.width/2,r.bottom+30,w,15);
+    [659.25,783.99,987.77,1318.5].forEach(function(fq,i){setTimeout(function(){Sound.note(fq,.045,2.4)},i*120)});
+    n++;try{localStorage.setItem('wishes',n)}catch(e){}
+    msg.textContent='"'+w+'" is floating over the meadow. '+(n>1?n+' wishes released so far.':'Make another?');inp.value='';released=true;
+    if(!World)msg.textContent='Your wish is on its way.';});
+})();
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in')})},{threshold:.25});io.observe($('#name'));io.observe($('#sign'));
 $('#lightBtn').addEventListener('click',function(){this.classList.add('lit');this.lastChild.textContent='Your lantern is rising';if(World){for(var k=0;k<9;k++)(function(k){setTimeout(function(){World.release(vw*(.25+Math.random()*.5),vh*(.35+Math.random()*.4))},k*160)})(k)}[523.25,659.25,783.99,1046.5].forEach(function(f,k){setTimeout(function(){Sound.note(f,.05,2.4)},k*140)});released=true});
 var stones=document.querySelectorAll('.stone');
@@ -1410,7 +1445,7 @@ function update(t,dt){
 }
 
 /* click anywhere (not on a control) to release a sky lantern */
-addEventListener('click',function(e){if(!World)return;if(menuOpen||e.target.closest('.flt,.daily,a,button,.track,.card,.proj,.scard,.tile2,.lcard,.ico,.ctrl,.menu'))return;World.release(e.clientX,e.clientY);released=true;Sound.note(783.99,.05,2.4)});
+addEventListener('click',function(e){if(!World)return;if(menuOpen||e.target.closest('.wish,.flt,.daily,a,button,.track,.card,.proj,.scard,.tile2,.lcard,.ico,.ctrl,.menu'))return;World.release(e.clientX,e.clientY);released=true;Sound.note(783.99,.05,2.4)});
 
 /* =========================================================
    5. BOOT
