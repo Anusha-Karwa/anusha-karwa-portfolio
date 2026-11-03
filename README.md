@@ -33,4 +33,4 @@ A single-page, scroll-driven portfolio set in a night meadow: sky lanterns, a ri
 14. **Invitation**: letters rise out of the river one by one.
 15. **Footer**: "Build it once. Build it right.", contact links, a light-a-lantern button, a signature and a giant "KARWA".
 
-The 3D camera stays in the sky until the story ends, then descends into the meadow and travels upstream to the waterfall. The hanging lantern (bottom left) toggles generated ambient sound, the moon toggles night/dawn, and clicking the sky releases a lantern.
+The 3D camera stays in the sky until the story ends, then descends into the meadow and travels upstream to the waterfall. The hanging lantern (bottom left) toggles generated ambient sound, and clicking the sky releases a lantern.
