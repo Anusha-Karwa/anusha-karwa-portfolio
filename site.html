@@ -139,36 +139,26 @@ main{position:relative;z-index:2}
 .hint{color:var(--mist);transition:opacity .4s}
 
 /* ---------- 2. the name ---------- */
-#name{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;padding-block:15vh 5vh}
-.hero-c{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;position:relative}
-.hero-c::before{content:"";position:absolute;left:50%;top:52%;width:min(900px,120vw);height:min(420px,60vh);transform:translate(-50%,-50%);background:radial-gradient(ellipse at center,rgba(45,12,42,.42),rgba(45,12,42,0) 68%);pointer-events:none;z-index:-1}
-.kick{color:#fff3e6;text-shadow:0 1px 12px rgba(60,10,40,.6)}
-.wish{margin-top:min(4vh,34px);display:grid;justify-items:center;gap:10px;width:min(460px,100%)}
-.wish label{color:#fff3e6;text-shadow:0 1px 10px rgba(40,10,40,.6)}
-.wbox{display:flex;align-items:center;gap:6px;width:100%;padding:6px 6px 6px 20px;border-radius:40px;background:rgba(36,18,48,.45);border:1px solid rgba(255,207,138,.45);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 10px 40px rgba(40,10,50,.25);transition:border-color .3s,box-shadow .3s}
-.wbox:focus-within{border-color:rgba(255,207,138,.9);box-shadow:0 0 0 4px rgba(255,176,74,.15),0 10px 40px rgba(255,150,80,.25)}
-.wbox input{flex:1;min-width:0;background:none;border:0;outline:0;color:#fff6ea;font:italic 500 22px/1.2 var(--f-accent);padding:6px 0}
-.wbox input::placeholder{color:rgba(255,236,214,.55)}
-.wbox button{all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;gap:8px;padding:11px 18px 11px 14px;border-radius:30px;background:linear-gradient(135deg,#ffd38a,#ff8a3d);color:#2a1206;font-weight:600;font-size:14px;transition:transform .3s,box-shadow .3s}
-.wbox button:hover{transform:translateY(-1px);box-shadow:0 6px 22px rgba(255,140,60,.45)}
-.wbox button:focus-visible{outline:2px solid #fff;outline-offset:2px}
-.wl{width:12px;height:16px;border-radius:5px 5px 6px 6px;background:#fff2d0;box-shadow:0 0 10px 3px rgba(255,240,200,.8);position:relative}
-.wl::before{content:"";position:absolute;left:3px;right:3px;top:-3px;height:3px;background:#2a1206;border-radius:1px}
-.wchips{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
-.wchips button{all:unset;cursor:pointer;padding:4px 11px;border-radius:20px;font:italic 500 15px var(--f-accent);color:#ffe9d2;background:rgba(36,18,48,.35);border:1px solid rgba(255,236,214,.22);transition:background .3s,border-color .3s}
-.wchips button:hover,.wchips button:focus-visible{background:rgba(255,176,74,.25);border-color:rgba(255,207,138,.7)}
-.wmsg{margin:0;min-height:1.3em;color:#ffe2b8;font-size:13px;text-shadow:0 1px 10px rgba(40,10,40,.6)}
-.nm2{margin:0;display:flex;gap:.28em;justify-content:center;align-items:baseline;font-size:clamp(40px,6.4vw,108px);line-height:1;white-space:nowrap}
-.nm2 .a{font-weight:500;font-variation-settings:"wdth" 100;letter-spacing:-.03em;color:#fff6ea}
-.nm2 .b{text-shadow:0 0 14px rgba(70,15,50,.55),0 2px 24px rgba(50,10,45,.5);font-family:var(--f-accent);font-style:italic;font-weight:500;letter-spacing:-.01em;color:#ffcf8a}
-h1.nm2{text-shadow:0 2px 30px rgba(50,10,45,.55),0 0 50px rgba(255,170,90,.25)}
-.nm2 .ch{display:inline-block;transition:opacity 1s,transform 1.2s cubic-bezier(.2,.8,.2,1),filter 1s;transition-delay:calc(var(--d) * 55ms + .2s)}
-#name:not(.in) h1.nm2 .ch{opacity:0;transform:translateY(.45em);filter:blur(10px)}
-.horizon.h2{width:min(560px,70vw);margin-top:6px}
-.refl2{font-size:clamp(40px,6.4vw,108px);transform:scaleY(-1);opacity:.22;filter:url(#ripple) blur(.6px);height:.5em;overflow:hidden;align-items:flex-end;-webkit-mask-image:linear-gradient(0deg,#000,transparent 85%);mask-image:linear-gradient(0deg,#000,transparent 85%);margin-top:-2px}
-.rot{margin:10px 0 0;font-size:clamp(17px,1.6vw,24px);color:#fff3e6;font-weight:400;text-shadow:0 1px 14px rgba(50,10,45,.6)}
-.rot .rw{font-family:var(--f-accent);font-style:italic;font-size:1.18em;color:#ffcf8a}
-.caret{display:inline-block;width:2px;height:1em;margin-left:3px;vertical-align:-.12em;background:#ffcf8a;animation:blink 1s steps(1) infinite}
+#name{position:relative;min-height:100vh;min-height:100svh}
+.hv{position:absolute;inset:0;color:#fff6ea}
+.hv .k{font:500 11px/1.4 var(--f-mono);letter-spacing:.18em;text-transform:uppercase;color:#fff3e6;text-shadow:0 1px 10px rgba(40,12,48,.6)}
+.hv .ctas{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+.hv .b1,.hv .b2{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:40px;text-decoration:none;font-weight:600;font-size:14px;transition:transform .3s,background .3s}
+.hv .b1{background:#fff6ea;color:#2a1a3a}.hv .b1:hover{background:#ffcf8a;transform:translateY(-2px)}
+.hv .b2{border:1px solid rgba(255,246,234,.6);color:#fff6ea;background:rgba(40,18,52,.25);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}.hv .b2:hover{background:rgba(255,246,234,.15);transform:translateY(-2px)}
+.hv .scrim{position:absolute;left:10%;top:25%;width:80%;height:50%;pointer-events:none;background:radial-gradient(ellipse at center,rgba(40,15,50,.45),rgba(40,15,50,0) 70%)}
+.hv8 .in{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;padding:0 16px}
+.roll-h{margin:0;display:grid;justify-items:center;gap:14px;font-weight:600}
+.roll-h .who{font-size:clamp(18px,1.6vw,24px);font-weight:500;color:#fff1e2;text-shadow:0 1px 14px rgba(40,12,48,.6)}
+.roll-h .roll{display:flex;align-items:baseline;justify-content:center;gap:.25em;font-size:clamp(38px,7vw,118px);letter-spacing:-.04em;line-height:1.05;text-shadow:0 4px 30px rgba(50,15,55,.5)}
+.roll-h .win{display:inline-block;height:1.1em;overflow:hidden;vertical-align:bottom;text-align:center}
+.roll-h .win i{font-style:normal;color:#fff6ea}
+.roll-h .win span{display:block;color:#ffd9a8;animation:roll 10s cubic-bezier(.7,0,.2,1) infinite}
+@keyframes roll{0%,16%{transform:translateY(0)}20%,36%{transform:translateY(-100%)}40%,56%{transform:translateY(-200%)}60%,76%{transform:translateY(-300%)}80%,96%{transform:translateY(-400%)}100%{transform:translateY(-500%)}}
+#name:not(.go) .hv8 .in>*{opacity:0}
+#name.go .hv8 .in>*{animation:hvIn .9s cubic-bezier(.2,.8,.2,1) both}
+#name.go .hv8 .in>*:nth-child(2){animation-delay:.1s}#name.go .hv8 .in>*:nth-child(3){animation-delay:.2s}
+@keyframes hvIn{from{opacity:0;transform:translateY(22px);filter:blur(6px)}}
 @keyframes blink{50%{opacity:0}}
 .giant{display:flex;justify-content:space-between;font-weight:800;font-variation-settings:"wdth" 125;font-size:15.4vw;line-height:.78;letter-spacing:0;margin:0;overflow:hidden;padding-bottom:.04em}
 .giant{filter:drop-shadow(0 6px 30px rgba(40,12,40,.45))}
@@ -435,14 +425,6 @@ h1.nm2{text-shadow:0 2px 30px rgba(50,10,45,.55),0 0 50px rgba(255,170,90,.25)}
   .c-meta{margin-bottom:0}
 }
 @media (max-width:560px){
-  .wish{width:calc(100vw - 40px);max-width:360px}
-  .wish label{font-size:9.5px;letter-spacing:.1em;text-align:center}
-  .wbox{padding-left:16px}
-  .wbox input{font-size:19px}
-  .wbox button{padding:10px 14px 10px 12px;font-size:13px}
-  .wmsg{text-align:center}
-  h1.nm2{text-shadow:0 0 16px rgba(70,15,50,.75),0 2px 30px rgba(50,10,45,.6)}
-  .hero-c{justify-content:flex-start;padding-top:4vh}
   #name{padding-bottom:13vh}
   .giant,.giant.refl{font-size:14.6vw}
   .f-giant{font-size:15.4vw}
@@ -541,26 +523,12 @@ h1.nm2{text-shadow:0 2px 30px rgba(50,10,45,.55),0 0 50px rgba(255,170,90,.25)}
 
 <main>
   <!-- 2 -->
-  <section id="name" class="wrap" aria-label="Name">
-    <div class="hero-c">
-      <span class="mono kick">Portfolio · 2026 · Pune</span>
-      <h1 class="nm2" id="nm2" aria-label="Anusha Karwa"><span class="a">Anusha</span> <span class="b">Karwa</span></h1>
-      <div class="horizon h2"></div>
-      <div class="nm2 refl2" id="refl2" aria-hidden="true"><span class="a">Anusha</span> <span class="b">Karwa</span></div>
-      <p class="rot">I <span class="rw" id="rotw"></span><i class="caret"></i></p>
-      <form class="wish" id="wish" autocomplete="off">
-        <label class="mono" for="wishIn">Make a wish · set it free over the meadow</label>
-        <div class="wbox"><input id="wishIn" name="wish" maxlength="26" placeholder="more sunsets" aria-describedby="wmsg"><button type="submit"><i class="wl"></i>Release</button></div>
-        <div class="wchips" id="wchips"></div>
-        <p class="wmsg" id="wmsg" aria-live="polite"></p>
-      </form>
-    </div>
-    <div class="name-meta">
-      <div><strong>Code,</strong>Strategy, Story</div>
-      <div><strong>Currently</strong>Open to product and strategy roles</div>
-      <div><strong>An engineer who learned to sell.</strong>A seller who learned to build.</div>
-      <a class="down" href="#hello" data-go="#hello" aria-label="Keep scrolling"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M5 13l7 7 7-7"/></svg></a>
-    </div>
+  <section id="name" aria-label="Introduction">
+    <div class="hv hv8"><div class="scrim"></div><div class="in">
+      <span class="k">Portfolio · 2026 · Pune</span>
+      <h1 class="roll-h" aria-label="Anusha Karwa: engineer, builder, seller, storyteller, strategist"><span class="who" aria-hidden="true">Anusha Karwa is</span><span class="roll" aria-hidden="true"><span class="win"><span><i>an</i> engineer.</span><span><i>a</i> builder.</span><span><i>a</i> seller.</span><span><i>a</i> storyteller.</span><span><i>a</i> strategist.</span><span><i>an</i> engineer.</span></span></span></h1>
+      <div class="ctas"><a class="b1" href="#hello" data-go="#hello">Read my story <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M5 13l7 7 7-7"/></svg></a><a class="b2" href="#contact" data-go="#contact">Let's talk <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    </div></div>
   </section>
   <!-- 1 -->
   <section id="hello" aria-label="Introduction">
@@ -1349,22 +1317,6 @@ bigp.insertAdjacentHTML('afterbegin','<span class="pimg"><img data-icon="lantern
 var mws=bigp.querySelectorAll('.mw');
 
 /* reveal-on-view */
-(function(){var h=$('#nm2'),k=0;Array.prototype.forEach.call(h.querySelectorAll('span'),function(sp){sp.innerHTML=sp.textContent.split('').map(function(c){return '<span class="ch" style="--d:'+(k++)+'">'+c+'</span>'}).join('')})})();
-(function(){var W=['build payment systems.','sell ideas.','tell stories.','chase sunsets.','light lanterns.'],el=$('#rotw'),wi=0,ci=0,del=false;
-  function step(){var w=W[wi];if(!del){ci++;el.textContent=w.slice(0,ci);if(ci===w.length){del=true;return setTimeout(step,1600)}}else{ci--;el.textContent=w.slice(0,ci);if(ci===0){del=false;wi=(wi+1)%W.length}}setTimeout(step,del?35:70)}
-  if(RM)el.textContent=W[0];else setTimeout(step,1400)})();
-(function(){var f=$('#wish'),inp=$('#wishIn'),msg=$('#wmsg'),n=0,ideas=['more sunsets','a great team','brave ideas','calm deadlines','one more trip'];
-  try{n=+localStorage.getItem('wishes')||0}catch(e){}
-  $('#wchips').innerHTML=ideas.slice(1,4).map(function(w){return '<button type="button">'+w+'</button>'}).join('');
-  Array.prototype.forEach.call(document.querySelectorAll('#wchips button'),function(b){b.addEventListener('click',function(){inp.value=b.textContent;inp.focus()})});
-  var pi=0;setInterval(function(){if(document.activeElement!==inp&&!inp.value){pi=(pi+1)%ideas.length;inp.placeholder=ideas[pi]}},2600);
-  f.addEventListener('submit',function(e){e.preventDefault();var w=(inp.value||inp.placeholder).trim().slice(0,26);if(!w)return;
-    var r=inp.getBoundingClientRect();if(World)World.release(r.left+r.width/2,r.bottom+30,w,15);
-    [659.25,783.99,987.77,1318.5].forEach(function(fq,i){setTimeout(function(){Sound.note(fq,.045,2.4)},i*120)});
-    n++;try{localStorage.setItem('wishes',n)}catch(e){}
-    msg.textContent='"'+w+'" is floating over the meadow. '+(n>1?n+' wishes released so far.':'Make another?');inp.value='';released=true;
-    if(!World)msg.textContent='Your wish is on its way.';});
-})();
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in')})},{threshold:.25});io.observe($('#name'));io.observe($('#sign'));
 $('#lightBtn').addEventListener('click',function(){this.classList.add('lit');this.lastChild.textContent='Your lantern is rising';if(World){for(var k=0;k<9;k++)(function(k){setTimeout(function(){World.release(vw*(.25+Math.random()*.5),vh*(.35+Math.random()*.4))},k*160)})(k)}[523.25,659.25,783.99,1046.5].forEach(function(f,k){setTimeout(function(){Sound.note(f,.05,2.4)},k*140)});released=true});
 var stones=document.querySelectorAll('.stone');
@@ -1448,12 +1400,12 @@ function update(t,dt){
 }
 
 /* click anywhere (not on a control) to release a sky lantern */
-addEventListener('click',function(e){if(!World)return;if(menuOpen||e.target.closest('.wish,.flt,.daily,a,button,.track,.card,.proj,.scard,.tile2,.lcard,.ico,.ctrl,.menu'))return;World.release(e.clientX,e.clientY);released=true;Sound.note(783.99,.05,2.4)});
+addEventListener('click',function(e){if(!World)return;if(menuOpen||e.target.closest('.hv,.flt,.daily,a,button,.track,.card,.proj,.scard,.tile2,.lcard,.ico,.ctrl,.menu'))return;World.release(e.clientX,e.clientY);released=true;Sound.note(783.99,.05,2.4)});
 
 /* =========================================================
    5. BOOT
    ========================================================= */
-function finishLoader(){LOAD.target=100;var fin=function(){if(LOAD.shown<99.5){requestAnimationFrame(fin);return}LOAD.done=true;cancelAnimationFrame(LOAD.raf);LOAD.draw(100);setTimeout(function(){$('#loader').classList.add('done')},180)};fin()}
+function finishLoader(){LOAD.target=100;var fin=function(){if(LOAD.shown<99.5){requestAnimationFrame(fin);return}LOAD.done=true;cancelAnimationFrame(LOAD.raf);LOAD.draw(100);setTimeout(function(){$('#loader').classList.add('done');$('#name').classList.add('go')},180)};fin()}
 function boot(){
   try{if(GL){LOAD.target=40;renderIcons();LOAD.target=62}else fallbackIcons()}catch(e){console.warn('icons',e);fallbackIcons()}
   setIcons();
