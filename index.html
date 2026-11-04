@@ -162,7 +162,8 @@ main{position:relative;z-index:2}
 .roll-h .roll{display:flex;align-items:baseline;justify-content:center;gap:.25em;font-size:clamp(38px,7vw,118px);letter-spacing:-.04em;line-height:1.05}
 .roll-h .win{display:inline-block;height:1.1em;overflow:hidden;vertical-align:bottom;text-align:center}
 .roll-h .win i{font-style:normal;color:#1c0f3d}
-.roll-h .win span b{font-weight:inherit;background:linear-gradient(90deg,#1c0f3d,#5b1450);-webkit-background-clip:text;background-clip:text;color:transparent}
+.roll-h .win span b{font-weight:inherit;background:linear-gradient(110deg,#1c0f3d 38%,#ff9a4a 50%,#1c0f3d 62%);background-size:260% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:nsSheen 3.2s linear infinite}
+@media (prefers-reduced-motion:reduce){.roll-h .win span b{animation:none;background-position:50% 0}}
 .roll-h .win span{display:block;color:#1c0f3d;animation:roll 10s cubic-bezier(.7,0,.2,1) infinite}
 @keyframes roll{0%,16%{transform:translateY(0)}20%,36%{transform:translateY(-100%)}40%,56%{transform:translateY(-200%)}60%,76%{transform:translateY(-300%)}80%,96%{transform:translateY(-400%)}100%{transform:translateY(-500%)}}
 #name:not(.go) .hv8 .in>*{opacity:0}
