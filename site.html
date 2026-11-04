@@ -149,6 +149,10 @@ main{position:relative;z-index:2}
 .hv8 .in{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;padding:0 16px}
 .roll-h{margin:0;display:grid;justify-items:center;gap:2px;font-weight:600}
 .roll-h .who{line-height:1.05}
+.roll-h .nmx{display:inline-block;font-weight:700;background:linear-gradient(110deg,#2a1748 38%,#ff9a4a 50%,#2a1748 62%);background-size:260% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none;animation:nsSheen 3.2s linear infinite}
+.roll-h .isx{color:#2a1748;text-shadow:none}
+@keyframes nsSheen{from{background-position:130% 0}to{background-position:-130% 0}}
+@media (prefers-reduced-motion:reduce){.roll-h .nmx{animation:none;background-position:50% 0}}
 .roll-h .who{font-size:clamp(28px,3.2vw,52px);letter-spacing:-.02em;font-weight:500;color:#fff1e2;text-shadow:0 1px 14px rgba(40,12,48,.6)}
 .roll-h .roll{display:flex;align-items:baseline;justify-content:center;gap:.25em;font-size:clamp(38px,7vw,118px);letter-spacing:-.04em;line-height:1.05}
 .roll-h .win{display:inline-block;height:1.1em;overflow:hidden;vertical-align:bottom;text-align:center}
@@ -527,7 +531,7 @@ main{position:relative;z-index:2}
   <section id="name" aria-label="Introduction">
     <div class="hv hv8"><div class="in">
       <span class="k">Portfolio · 2026 · Pune</span>
-      <h1 class="roll-h" aria-label="Anusha Karwa: engineer, builder, seller, storyteller, strategist"><span class="who" aria-hidden="true">Anusha Karwa is</span><span class="roll" aria-hidden="true"><span class="win"><span><i>an</i> <b>engineer.</b></span><span><i>a</i> <b>builder.</b></span><span><i>a</i> <b>seller.</b></span><span><i>a</i> <b>storyteller.</b></span><span><i>a</i> <b>strategist.</b></span><span><i>an</i> <b>engineer.</b></span></span></span></h1>
+      <h1 class="roll-h" aria-label="Anusha Karwa: engineer, builder, seller, storyteller, strategist"><span class="who" aria-hidden="true"><span class="nmx">Anusha Karwa</span> <span class="isx">is</span></span><span class="roll" aria-hidden="true"><span class="win"><span><i>an</i> <b>engineer.</b></span><span><i>a</i> <b>builder.</b></span><span><i>a</i> <b>seller.</b></span><span><i>a</i> <b>storyteller.</b></span><span><i>a</i> <b>strategist.</b></span><span><i>an</i> <b>engineer.</b></span></span></span></h1>
       <div class="ctas"><a class="b1" href="#hello" data-go="#hello">Read my story <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M5 13l7 7 7-7"/></svg></a><a class="b2" href="#contact" data-go="#contact">Let's talk <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
     </div></div>
   </section>
