@@ -146,11 +146,10 @@ main{position:relative;z-index:2}
 .hv .b1,.hv .b2{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:40px;text-decoration:none;font-weight:600;font-size:14px;transition:transform .3s,background .3s}
 .hv .b1{background:#fff6ea;color:#2a1a3a}.hv .b1:hover{background:#ffcf8a;transform:translateY(-2px)}
 .hv .b2{border:1px solid rgba(255,246,234,.6);color:#fff6ea;background:rgba(40,18,52,.25);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}.hv .b2:hover{background:rgba(255,246,234,.15);transform:translateY(-2px)}
-.hv .scrim{position:absolute;left:10%;top:25%;width:80%;height:50%;pointer-events:none;background:radial-gradient(ellipse at center,rgba(40,15,50,.45),rgba(40,15,50,0) 70%)}
 .hv8 .in{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;padding:0 16px}
 .roll-h{margin:0;display:grid;justify-items:center;gap:14px;font-weight:600}
 .roll-h .who{font-size:clamp(18px,1.6vw,24px);font-weight:500;color:#fff1e2;text-shadow:0 1px 14px rgba(40,12,48,.6)}
-.roll-h .roll{display:flex;align-items:baseline;justify-content:center;gap:.25em;font-size:clamp(38px,7vw,118px);letter-spacing:-.04em;line-height:1.05;text-shadow:0 4px 30px rgba(50,15,55,.5)}
+.roll-h .roll{display:flex;align-items:baseline;justify-content:center;gap:.25em;font-size:clamp(38px,7vw,118px);letter-spacing:-.04em;line-height:1.05}
 .roll-h .win{display:inline-block;height:1.1em;overflow:hidden;vertical-align:bottom;text-align:center}
 .roll-h .win i{font-style:normal;color:#fff6ea}
 .roll-h .win span{display:block;color:#ffd9a8;animation:roll 10s cubic-bezier(.7,0,.2,1) infinite}
@@ -524,7 +523,7 @@ main{position:relative;z-index:2}
 <main>
   <!-- 2 -->
   <section id="name" aria-label="Introduction">
-    <div class="hv hv8"><div class="scrim"></div><div class="in">
+    <div class="hv hv8"><div class="in">
       <span class="k">Portfolio · 2026 · Pune</span>
       <h1 class="roll-h" aria-label="Anusha Karwa: engineer, builder, seller, storyteller, strategist"><span class="who" aria-hidden="true">Anusha Karwa is</span><span class="roll" aria-hidden="true"><span class="win"><span><i>an</i> engineer.</span><span><i>a</i> builder.</span><span><i>a</i> seller.</span><span><i>a</i> storyteller.</span><span><i>a</i> strategist.</span><span><i>an</i> engineer.</span></span></span></h1>
       <div class="ctas"><a class="b1" href="#hello" data-go="#hello">Read my story <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M5 13l7 7 7-7"/></svg></a><a class="b2" href="#contact" data-go="#contact">Let's talk <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
